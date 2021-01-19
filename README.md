@@ -24,4 +24,6 @@
 ```bash
 > node index.js
 ```
-[Nurutomo](https://github.com/Nurutomo)
+---------
+| [Nurutomo](https://github.com/Nurutomo) |
+| :-: |
