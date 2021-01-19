@@ -3,15 +3,14 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 Tutor Buat Bot WA:
 
 Ketik :
-1) $pkg install git
-2) $pkg install ffmpeg
-3) $pkg install imagemagick
-4) $pkg install nodejs
-5) $git clone https://github.com/yahtoiba/hiks
-6) $ls
-7) $cd hiks
-8) npm i
-9) node index.js
+1) pkg install git
+2) pkg install ffmpeg
+3) pkg install imagemagick
+4) pkg install nodejs
+5) git clone https://github.com/yahtoiba/hiks
+6) cd hiks
+7) npm i
+8) node index.js
 `.trim(), m)
 }
 handler.help = ['tutorial']
