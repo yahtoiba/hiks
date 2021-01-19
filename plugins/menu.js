@@ -60,10 +60,10 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
           if (menu.help) groups[tag].push(menu)
     }
     conn.menu = conn.menu ? conn.menu : {}
-    let before = conn.menu.before || `${conn.getName(conn.user.jid)} • Bot\n\nHai, %name!\n Total: *%exp XP*\n\n*Limit Kamu:* %limit\n* Tanggal:* *%week, %date*\n Waktu: *%time*\n_Uptime: %uptime_\n*All User:* %totalreg\n\©Copyright 2021\n\n❏HiksBOT❏\n\n%readmore`
-    let header = conn.menu.header || '╭─「 %category 」'
-    let body   = conn.menu.body   || '│➥ %cmd%islimit'
-    let footer = conn.menu.footer || '╰────\n'
+    let before = conn.menu.before || `${conn.getName(conn.user.jid)} • Bot\n\nHolaa, %name!\n Total: *%exp XP*\n\n*Limit Kamu:* %limit\n*Tanggal:* *%week, %date*\n *Waktu:* *%time*\n*_Uptime:* %uptime_\n*Register User:* %totalreg\n\n©Copyright 2021\n\n❏HiksBOT❏\n\n%readmore`
+    let header = conn.menu.header || '╔═ ❉ %category ❉'
+    let body   = conn.menu.body   || '║❏ %cmd%islimit'
+    let footer = conn.menu.footer || '╚═════\n'
     let after  = conn.menu.after  || conn.user.jid == global.conn.user.jid ? '' : `\nPowered by https://wa.me/${global.conn.user.jid.split`@`[0]}`
     let _text  = before + '\n'
     for (let tag in groups) {
