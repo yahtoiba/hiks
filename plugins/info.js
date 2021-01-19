@@ -1,28 +1,105 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   conn.reply(m.chat, `
-╠═〘 INFO BOT 〙 ═
-╠➥ Dibuat dengan bahasa javascript via NodeJs
-╠➥ Rec: Drawl Nag
-╠➥ Script: @Nurotomo
-║
-╠➥ Github: https://github.com/Arya274/Arya-DN
-╠➥ Instagram: @arpunchs
-╠➥ YouTube: Drawl Nag
-║
-╠═〘 Thanks To 〙 ═
-╠➥ Nurotomo
-╠➥ MfarelS
-╠➥ ST4RZ
-╠➥ Dan kawan yang lain :)
-║
-╠═〘 DONASI 〙 ═
-╠➥ SmartFren: 0882-3543-5804
-╠➥ Tsel: 0813-5730-2007
-╠➥ Indosat: 0815-1586-0089
-║
-║>Request? Wa.me/6288235435804
-║
-╠═〘 NfQ BOT 〙 ═
+╔════════════════════━───¤͜͡҈➢
+║ *SEKEDAR INFO*
+╠════════════════════
+║├ௐ *CREATOR*
+║├ௐ Human Hiks
+╠════════════════════
+║¤͜͡҈¤͜͡҈¤͜͡҈¤͜͡҈¤͜͡҈➥ *ABOUT*
+╠════════════════════
+║BOT INI MENGGUNAKAN SOURCE 
+║CODE YANG SAYA DAPATKAN DAN
+║SAYA MODIFIKASI DENGAN
+║PENAMBAHAN, PENGURANGAN, 
+║DAN PERUBAHAN BEBERAPA FITUR.
+║────────────────────────
+║BOT INI DIBUAT MENGGUNAKAN
+║NODE.JS & JavaScript
+║────────────────────────
+║BOT ON 24 JAM
+║KALO OFF BERARTI SIBUK (>.<)
+║────────────────────────
+║HANYA BOT TERMUX YG
+║SEDERHANA JADI JAN 
+║BERHARAP LEBIH ツ
+║────────────────────────
+║*JIKA ADA YG ERORR HUB ADMIN*
+╠════════════════════
+║ *RULE§ BOT*
+╠════════════════════
+║╭────❉ *RULE§ BOT* ❉──
+║│CALL/VC = BLOK 24 JAM
+║│SPAM CALL/VC = PERMANENT
+║│NO SHARE VIRৡৢ¤͜͡҈!!
+║│JAN ASAL MASUKIN KE GC LU
+║╰───────────────────
+╠════════════════════
+║ *THANKS TO* 🤝🏻
+╠════════════════════
+║├≽️Allah
+║├≽️Orang Tua
+║├≽️Keluarga
+║├≽️Kamu yg baca
+║├≽️Teman
+║├≽️Teman Lupdir
+║├≽️Teman yg dtg pas ada maunya
+║├≽️Sahabat
+║├≽️Kerabat
+║├≽️Saudara
+║├≽️Musuh
+║├≽️Pacar
+║├≽️Stm
+║├≽️Ttm
+║├≽️Selingkuhan
+║├≽️Mantan
+║├≽️Subscriber gw
+║├≽️Followers gw
+║├≽️Viewers gw
+║├≽️Yg sekontak wa gw
+║├≽️Langit
+║├≽️Bintang
+║├≽️Galaksi
+║├≽️Matahari
+║├≽️Bulan
+║├≽️Merkurius
+║├≽️Venus
+║├≽️Mars
+║├≽️Jupiter
+║├≽️Saturnus
+║├≽️Uranus
+║├≽️Neptunus
+║├≽️Dan planet lain
+║├≽️Terutama bumi
+║├≽️Angin
+║├≽️Udara
+║├≽️Atsmosfer
+║├≽️Langit
+║├≽️Awan
+║├≽️Hujan
+║├≽️Pohon
+║├≽️Oksigen
+║├≽️Tumbuhan
+║├≽️Hewan
+║├≽️Buah
+║├≽️Kucing gw
+║├≽️Ikan
+║├≽️Ayam
+║├≽️Tanah
+║├≽️Air
+║├≽️Api
+║├≽️Listrik
+║├≽️Pln
+║├≽️Indihome
+║├≽️Rumah gw
+║├≽️Dll Selengkapnya yap
+║├≽️Cape gw ngetiknya anjrott
+║├≽️dahbye
+╠════════════════════
+║ ꔷ㆒ *_Mwhhhe_*
+╚════════════════════━───¤͜͡҈➢
+║ • Mao Request? bit.ly/ClickDiSinii
+╚═ ❏ Hiks Bot ❏ 
 `.trim(), m)
 }
 handler.help = ['info']
