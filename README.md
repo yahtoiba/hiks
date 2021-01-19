@@ -1,4 +1,4 @@
-| ``H i k s B O T`` |
+| H i k s B O T |
 | :-: |
 ---------
 ##### Termux Only
