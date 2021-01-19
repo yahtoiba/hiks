@@ -72,7 +72,7 @@ conn.handler = async function (m) {
         ) global.DATABASE._data.users[m.sender].lastclaim = 0
       } else global.DATABASE._data.users[m.sender] = {
         exp: 0,
-        limit: 10,
+        limit: 15,
         lastclaim: 0,
       }
       if (global.DATABASE._data.chats[m.chat]) {
