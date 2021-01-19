@@ -24,3 +24,4 @@
 ```bash
 > node index.js
 ```
+[Nurutomo](https://github.com/Nurutomo)
