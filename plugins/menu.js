@@ -23,10 +23,11 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let tags = {
       'main': 'Main',
+      'info': 'Info',
       'about': 'About And Info',
       'xp': 'Exp & Limit',
       'sticker': 'Sticker',
-      'kerang': 'Kerang Ajaib',
+      'kerang': 'Kerang',
       'quotes': 'Quotes',
       'admin': 'Admin',
       'group': 'Group',
@@ -37,7 +38,6 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'owner': 'Owner',
       'host': 'Host',
       'advanced': 'Advanced',
-      'info': 'Info',
       '': 'No Category',
     }
     for (let plugin of Object.values(global.plugins))
@@ -63,7 +63,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let before = conn.menu.before || `${conn.getName(conn.user.jid)} • Bot\n\nHolaa, %name!\n Total: *%exp XP*\n\n*Limit Kamu:* %limit\n*Tanggal:* *%week, %date*\n *Waktu:* *%time*\n*_Uptime:* %uptime_\n*Register User:* %totalreg\n\n©Copyright 2021\n\n❏HiksBOT❏\n\n%readmore`
     let header = conn.menu.header || '╔═ ❉ %category ❉'
     let body   = conn.menu.body   || '║❏ %cmd%islimit'
-    let footer = conn.menu.footer || '╚═════\n'
+    let footer = conn.menu.footer || '╚═════════\n'
     let after  = conn.menu.after  || conn.user.jid == global.conn.user.jid ? '' : `\nPowered by https://wa.me/${global.conn.user.jid.split`@`[0]}`
     let _text  = before + '\n'
     for (let tag in groups) {
@@ -102,7 +102,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.exp = 3
+handler.exp = 2
 
 module.exports = handler
 
