@@ -5,7 +5,7 @@ let handler  = async (m, { conn }) => {
     child.unref()
     await conn.reply(m.chat, 'Mereset bot:v', m)
     process.exit()
-  } else conn.reply(m.chat, '_eeeeeiiittsssss..._', m)
+  } else conn.reply(m.chat, '_hayoooooo..._', m)
 }
 handler.help = ['debounce']
 handler.tags = ['host']
