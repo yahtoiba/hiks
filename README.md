@@ -1,4 +1,4 @@
-#### hiks bot
+#### ``H i k s B O T``
 ---------
 ##### Termux Only
 ```bash
