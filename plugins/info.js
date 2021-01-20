@@ -3,8 +3,10 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ╔════════════════════━───¤͜͡҈➢
 ║ *SEKEDAR INFO*
 ╠════════════════════
-║├ௐ *CREATOR*
-║├ௐ Human Hiks
+║ ➽ *CREATOR*
+║❏ Nurutomo
+║❏ Hiks (gw)
+║❏ Arya
 ╠════════════════════
 ║¤͜͡҈¤͜͡҈¤͜͡҈¤͜͡҈¤͜͡҈➥ *ABOUT*
 ╠════════════════════
