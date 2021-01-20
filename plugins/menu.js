@@ -60,7 +60,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
           if (menu.help) groups[tag].push(menu)
     }
     conn.menu = conn.menu ? conn.menu : {}
-    let before = conn.menu.before || `${conn.getName(conn.user.jid)} ❏ Bot\n\nHolaa, %name🐊\n Total: *%exp XP*\n\n*Limit Kamu:* %limit\n*Tanggal:* *%week, %date*\n *Waktu:* *%time*\n*Uptime:* %uptime\n*User Terdaftar:* %totalreg\n\n© Copyright by Hiks BOT 2021\n\nSTART\n\n%readmore`
+    let before = conn.menu.before || `${conn.getName(conn.user.jid)} ❏ BOT\n\nHolaa, %name member Hiks BOT!\n Total: *%exp XP*\n\n*Limit Kamu:* %limit\n*Tanggal:* *%week, %date*\n *Waktu:* *%time*\n*Uptime:* %uptime\n*User Terdaftar:* %totalreg\n\n© Copyright by Hiks BOT 2021\n\nSTART\n\n%readmore`
     let header = conn.menu.header || '╭──◪ %category'
     let body   = conn.menu.body   || '├─❏ %cmd%islimit'
     let footer = conn.menu.footer || '╰─────────────ᜰ\n'
