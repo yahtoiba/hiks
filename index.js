@@ -173,7 +173,7 @@ conn.handler = async function (m) {
           console.log(e)
           this.reply(m.chat, util.format(e), m)
         } finally {
-          if (m.limit == true) this.reply(m.chat, '1 Limit terpakai', m)
+          if (m.limit == true) this.reply(m.chat, 'Limit berkurang -1', m)
         }
   			break
   		}
