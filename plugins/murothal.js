@@ -1,6 +1,6 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   conn.reply(m.chat, `
-List Surah:
+                      Assalammualaikum wr.wb
 
 [ بسم الله الر حمن الر حيم ]
 
