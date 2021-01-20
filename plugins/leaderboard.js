@@ -5,7 +5,7 @@ let handler = async (m, { conn, args }) => {
   let usersLim = sortedLim.map(v => v[0])
   let len = args[0] && args[0].length > 0 ? Math.min(1000, Math.max(parseInt(args[0]), 5)) : Math.min(50, sortedExp.length)
   let text = `
-[!] *Leaderboard Sementara*
+[!] *𝐋𝐞𝐚𝐝𝐞𝐫𝐛𝐨𝐚𝐫𝐝 𝐒𝐞𝐦𝐞𝐧𝐭𝐚𝐫𝐚*
 
 ❏ *XP Leaderboard Top 1 - ${len}* •
 ◪ Rank ke: *${usersExp.indexOf(m.sender) + 1}* dari *${usersExp.length} User All*
