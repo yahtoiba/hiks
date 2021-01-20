@@ -28,17 +28,17 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'xp': '𝐄𝐱𝐩 & 𝐋𝐢𝐦𝐢𝐭',
       'sticker': '𝐌𝐚𝐤𝐞𝐫',
       'kerang': '𝐊𝐞𝐫𝐚𝐧𝐠',
-      'quotes': 'Quotes',
+      'quotes': '𝐐𝐮𝐨𝐭𝐞𝐬',
       'admin': '𝐀𝐝𝐦𝐢𝐧',
       'group': '𝐆𝐫𝐨𝐮𝐩',
       'internet': '𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠',
       'downloader': '𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫',
-      'tools': 'Tools',
-      'jadibot': 'Use Bot',
+      'tools': '𝐓𝐨𝐨𝐥𝐬',
+      'jadibot': '𝐔𝐬𝐞 𝐁𝐨𝐭',
       'owner': '𝐎𝐰𝐧𝐞𝐫',
-      'host': 'Host',
+      'host': '𝐇𝐨𝐬𝐭',
       'advanced': '𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝',
-      '': 'No Category',
+      '': 'Next Update',
     }
     for (let plugin of Object.values(global.plugins))
       if (plugin && 'tags' in plugin)
