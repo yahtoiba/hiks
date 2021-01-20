@@ -1,20 +1,18 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   conn.reply(m.chat, `
-QUR'AN BOT:
-Via Copas {SEBARKAN}
+List Surah BOT:
 
-*YouTube:*
-_~Drawl Nag_
+[ SEBARKAN ]
 
-Juz 1 ⇨ http://j.mp/2b8SiNO
-Juz 2 ⇨ http://j.mp/2b8RJmQ
-Juz 3 ⇨ http://j.mp/2bFSrtF
-Juz 4 ⇨ http://j.mp/2b8SXi3
-Juz 5 ⇨ http://j.mp/2b8RZm3
-Juz 6 ⇨ http://j.mp/28MBohs
-Juz 7 ⇨ http://j.mp/2bFRIZC
-Juz 8 ⇨ http://j.mp/2bufF7o
-Juz 9 ⇨ http://j.mp/2byr1bu
+Juz 1  ⇨ http://j.mp/2b8SiNO
+Juz 2  ⇨ http://j.mp/2b8RJmQ
+Juz 3  ⇨ http://j.mp/2bFSrtF
+Juz 4  ⇨ http://j.mp/2b8SXi3
+Juz 5  ⇨ http://j.mp/2b8RZm3
+Juz 6  ⇨ http://j.mp/28MBohs
+Juz 7  ⇨ http://j.mp/2bFRIZC
+Juz 8  ⇨ http://j.mp/2bufF7o
+Juz 9  ⇨ http://j.mp/2byr1bu
 Juz 10 ⇨ http://j.mp/2bHfyUH
 Juz 11 ⇨ http://j.mp/2bHf80y
 Juz 12 ⇨ http://j.mp/2bWnTby
