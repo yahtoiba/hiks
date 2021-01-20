@@ -8,16 +8,16 @@ let handler = async (m, { conn, args }) => {
 [!] *𝐋𝐞𝐚𝐝𝐞𝐫𝐛𝐨𝐚𝐫𝐝 𝐒𝐞𝐦𝐞𝐧𝐭𝐚𝐫𝐚*
 
 ❏ *𝐗𝐏 𝐋𝐞𝐚𝐝𝐞𝐫𝐛𝐨𝐚𝐫𝐝 𝐓𝐨𝐩 𝟏 - ${len}* •
-◪ Rank ke: *${usersExp.indexOf(m.sender) + 1}* dari *${usersExp.length} User All*
+◪ 𝐑𝐚𝐧𝐤𝐢𝐧𝐠 𝐤𝐞: *${usersExp.indexOf(m.sender) + 1}* 𝐝𝐚𝐫𝐢 *${usersExp.length} User All*
 
 ${sortedExp.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.exp + ' Exp*').join`\n`}
 
 ❏ *𝐋𝐢𝐦𝐢𝐭 𝐋𝐞𝐚𝐝𝐞𝐫𝐛𝐨𝐚𝐫𝐝 𝐓𝐨𝐩 𝟏 - ${len}* •
-◪ Rank ke: *${usersLim.indexOf(m.sender) + 1}* dari *${usersLim.length} User All*
+◪ 𝐑𝐚𝐧𝐤𝐢𝐧𝐠 𝐤𝐞: *${usersLim.indexOf(m.sender) + 1}* 𝐝𝐚𝐫𝐢 *${usersLim.length} User All*
 
 ${sortedLim.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.limit + ' Limit*').join`\n`}
 
-*Terus Aktif Untuk Menjadi Top!*
+*Terus Aktif Menggunakan Untuk Menjadi Top!*
 `.trim()
   conn.reply(m.chat, text, m, {
     contextInfo: {
