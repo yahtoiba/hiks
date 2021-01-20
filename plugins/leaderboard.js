@@ -7,12 +7,12 @@ let handler = async (m, { conn, args }) => {
   let text = `
 [!] *𝐋𝐞𝐚𝐝𝐞𝐫𝐛𝐨𝐚𝐫𝐝 𝐒𝐞𝐦𝐞𝐧𝐭𝐚𝐫𝐚*
 
-❏ *XP Leaderboard Top 1 - ${len}* •
+❏ *𝐗𝐏 𝐋𝐞𝐚𝐝𝐞𝐫𝐛𝐨𝐚𝐫𝐝 𝐓𝐨𝐩 𝟏 - ${len}* •
 ◪ Rank ke: *${usersExp.indexOf(m.sender) + 1}* dari *${usersExp.length} User All*
 
 ${sortedExp.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.exp + ' Exp*').join`\n`}
 
-❏ *Limit Leaderboard Top 1 - ${len}* •
+❏ *𝐋𝐢𝐦𝐢𝐭 𝐋𝐞𝐚𝐝𝐞𝐫𝐛𝐨𝐚𝐫𝐝 𝐓𝐨𝐩 𝟏 - ${len}* •
 ◪ Rank ke: *${usersLim.indexOf(m.sender) + 1}* dari *${usersLim.length} User All*
 
 ${sortedLim.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.limit + ' Limit*').join`\n`}
