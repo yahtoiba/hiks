@@ -3,15 +3,15 @@ let handler = async (m, { conn, args }) => {
   let sortedLim = Object.entries(global.DATABASE.data.users).sort((a, b) => b[1].limit - a[1].limit)
   let usersExp = sortedExp.map(v => v[0])
   let usersLim = sortedLim.map(v => v[0])
-  let len = args[0] && args[0].length > 0 ? Math.min(1000, Math.max(parseInt(args[0]), 5)) : Math.min(20, sortedExp.length)
+  let len = args[0] && args[0].length > 0 ? Math.min(1000, Math.max(parseInt(args[0]), 5)) : Math.min(30, sortedExp.length)
   let text = `
-• *XP Leaderboard Top ${len}* •
-Kamu: *${usersExp.indexOf(m.sender) + 1}* dari *${usersExp.length}*
+❏ *XP Leaderboard Top 1 - ${len}* •
+◪ Rank ke: *${usersExp.indexOf(m.sender) + 1}* dari *${usersExp.length}*
 
 ${sortedExp.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.exp + ' Exp*').join`\n`}
 
-• *Limit Leaderboard Top ${len}* •
-Kamu: *${usersLim.indexOf(m.sender) + 1}* dari *${usersLim.length}*
+❏ *Limit Leaderboard Top 1 - ${len}* •
+◪ Rank ke: *${usersLim.indexOf(m.sender) + 1}* dari *${usersLim.length}*
 
 ${sortedLim.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.limit + ' Limit*').join`\n`}
 `.trim()
