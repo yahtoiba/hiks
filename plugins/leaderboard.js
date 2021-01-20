@@ -18,6 +18,8 @@ ${sortedExp.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`
 ${sortedLim.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.limit + ' Limit*').join`\n`}
 
 *Terus Aktif Menggunakan Untuk Menjadi Top!*
+
+ᵇʸ: ᴴⁱᵏˢ
 `.trim()
   conn.reply(m.chat, text, m, {
     contextInfo: {
