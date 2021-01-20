@@ -1,5 +1,5 @@
-| H i k s | B O T |
-| :-: | :-: |
+| H i k s | B O T | v4.2(https://github.com/yahtoiba) |
+| :-: | :-: | :-: |
 ---------
 ##### Termux Only
 ```bash
