@@ -5,6 +5,8 @@ let handler = async (m, { conn, args }) => {
   let usersLim = sortedLim.map(v => v[0])
   let len = args[0] && args[0].length > 0 ? Math.min(1000, Math.max(parseInt(args[0]), 5)) : Math.min(30, sortedExp.length)
   let text = `
+❉ *Leaderboard Sementara*
+
 ❏ *XP Leaderboard Top 1 - ${len}* •
 ◪ Rank ke: *${usersExp.indexOf(m.sender) + 1}* dari *${usersExp.length}*
 
@@ -14,6 +16,8 @@ ${sortedExp.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`
 ◪ Rank ke: *${usersLim.indexOf(m.sender) + 1}* dari *${usersLim.length}*
 
 ${sortedLim.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.limit + ' Limit*').join`\n`}
+
+*Yang belum menjadi Top Jangan Rendah Hati Semangatt!*
 `.trim()
   conn.reply(m.chat, text, m, {
     contextInfo: {
