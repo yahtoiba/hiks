@@ -72,7 +72,7 @@ conn.handler = async function (m) {
         ) global.DATABASE._data.users[m.sender].lastclaim = 0
       } else global.DATABASE._data.users[m.sender] = {
         exp: 0,
-        limit: 15,
+        limit: 20,
         lastclaim: 0,
       }
       if (global.DATABASE._data.chats[m.chat]) {
@@ -147,10 +147,10 @@ conn.handler = async function (m) {
 
         m.isCommand = true
         let xp = 'exp' in plugin ? parseInt(plugin.exp) : 9
-        if (xp > 99) m.reply('Ngecheat njim -_-')
+        if (xp > 99) m.reply('Ngecit -_-')
         else m.exp += xp
         if (!isPrems && global.DATABASE._data.users[m.sender].limit < 1 && plugin.limit) {
-          this.reply(m.chat, `yahh Limit kamu habis:(, silahkan beli melalui *${usedPrefix}buy*`, m)
+          this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
           continue
         }
         try {
@@ -173,7 +173,7 @@ conn.handler = async function (m) {
           console.log(e)
           this.reply(m.chat, util.format(e), m)
         } finally {
-          if (m.limit == true) this.reply(m.chat, 'Limit berkurang -1', m)
+          if (m.limit == true) this.reply(m.chat, '1 Limit terpakai', m)
         }
   			break
   		}
@@ -194,7 +194,7 @@ conn.handler = async function (m) {
 
 conn.on('message-new', conn.handler) 
 conn.on('error', conn.logger.error)
-global.mods = ['6287714745440@s.whatsapp.net']
+global.mods = []
 global.prems = []
 
 global.dfail = (type, m, conn) => {
@@ -210,8 +210,27 @@ global.dfail = (type, m, conn) => {
   msg && conn.reply(m.chat, msg, m)
 }
 
-
-if (opts['test']) process.stdin.on('data', chunk => conn.emit('message-new', { text: chunk.toString() }))
+if (opts['test']) {
+  conn.user = {
+    jid: '2219191@s.whatsapp.net',
+    name: 'test',
+    phone: {}
+  }
+  conn.sendMessage = (chatId, content, type, opts) => conn.emit('message-new', {
+    messageStubParameters: [],
+    key: {
+      fromMe: true,
+      remoteJid: chatId,
+      id: opts ? '3EB0ABCDEF45' : 'biasa'
+    },
+    message: {
+      [type]: content
+    },
+    messageStubType: 0,
+    timestamp: +new Date
+  })
+  process.stdin.on('data', chunk => conn.sendMessage('123@s.whatsapp.net', chunk.toString().trimEnd(), 'conversation'))
+}
 else conn.connect().then(() => {
   global.timestamp.connect = new Date
 })
@@ -232,7 +251,7 @@ for (let filename in global.plugins) {
     delete global.plugins[filename]
   }
 }
-console.log(global.plugins)
+console.log(Object.keys(global.plugins))
 global.reload = (event, filename) => {
   if (pluginFilter(filename)) {
     let dir = './plugins/' + filename
