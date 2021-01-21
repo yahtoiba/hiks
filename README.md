@@ -27,12 +27,14 @@
 ```
 ---------
 
-##### Get ApiKeym
+##### Get ApiKey?
 
 | [MhankBarBar](https://mhankbarbar.tech) |
 | :-: |
 
 ---------
+
+##### Special Thanks 4
 
 | [Nurutomo](https://github.com/Nurutomo) |
 | :-: |
