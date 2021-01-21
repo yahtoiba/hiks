@@ -27,7 +27,9 @@
 ```
 ---------
 
-Get ApiKey ? [MhankBarBar](https://MhanBarBar.tech)
+Get ApiKey ? | [MhankBarBar](https://mhankbarbar.tech) |
+             | :-: |
+
 ---------
 
 | [Nurutomo](https://github.com/Nurutomo) |
