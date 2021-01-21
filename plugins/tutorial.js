@@ -1,16 +1,7 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   conn.reply(m.chat, `
-Tutor Buat Bot WA:
-
-Ketik :
-1) pkg install git
-2) pkg install ffmpeg
-3) pkg install imagemagick
-4) pkg install nodejs
-5) git clone https://github.com/yahtoiba/hiks
-6) cd hiks
-7) npm i
-8) node index.js
+Tutor Buat Bot WA?
+Harap hubungi owner tqu:)
 `.trim(), m)
 }
 handler.help = ['tutorial']
