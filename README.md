@@ -27,8 +27,10 @@
 ```
 ---------
 
-Get ApiKey ? | [MhankBarBar](https://mhankbarbar.tech) |
-             | :-: |
+##### Get ApiKeym
+
+| [MhankBarBar](https://mhankbarbar.tech) |
+| :-: |
 
 ---------
 
