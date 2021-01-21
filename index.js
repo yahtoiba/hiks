@@ -17,11 +17,6 @@ CFonts.say('\'By\' @itspapoy', {
   align: 'center',
   gradient: ['red', 'yellow']
 })
-CFonts.say('\'THX\' @Nurutomo', {
-  font: 'chrome',
-  align: 'center',
-  gradient: ['red', 'magenta']
-})
 
 function start() {
   let args = [path.join(__dirname, 'main.js'), ...process.argv.slice(2)]
