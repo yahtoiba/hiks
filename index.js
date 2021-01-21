@@ -1,4 +1,4 @@
-console.log('Starting...........')
+console.log('Starting...')
 let { spawn } = require('child_process')
 let path = require('path')
 const CFonts  = require('cfonts')
@@ -7,10 +7,10 @@ CFonts.say('TERMUX WHATSAPP BOT', {
   align: 'center',
   gradient: ['red', 'magenta']
 })
-CFonts.say('\'HiksBOT\' By @itspapoy', {
-  font: 'chrome',
+CFonts.say('\'Hiks-Bot\' By @itspapoy', {
+  font: 'console',
   align: 'center',
-  gradient: ['red', 'yellow']
+  gradient: ['red', 'magenta']
 })
 
 function start() {
