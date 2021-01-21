@@ -7,10 +7,10 @@ let handler  = async (m, { conn, args, usedPrefix }) => {
   if (id in global.math) return conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', global.math[id][0])
   let math = genMath(mode)
   global.math[id] = [
-    await conn.reply(m.chat, `Berapa hasil dari *${math.str}*?\n\nTimeout: ${(math.time / 1000).toFixed(2)} detik\nBonus Jawaban Benar: ${math.bonus} XP`, m),
+    await conn.reply(m.chat, `Berapakah hasil dari *${math.str}*?\n\nTimeout: ${(math.time / 1000).toFixed(2)} detik\nBonus Jawaban Benar: ${math.bonus} XP`, m),
     math, 4,
     setTimeout(() => {
-      if (global.math[id]) conn.reply(m.chat, `Waktu habis!\nJawabannya adalah ${math.result}`, global.math[id][0])
+      if (global.math[id]) conn.reply(m.chat, `Waktunya habis!\nJawabannya adalah ${math.result}`, global.math[id][0])
       delete global.math[id]
     }, math.time)
   ]
@@ -27,6 +27,7 @@ let modes = {
   medium: [-40, 40, -20, 20, '*/+-', 50000, 150],
   hard: [-100, 100, -70, 70, '*/+-', 60000, 400],
   extreme: [-999999, 999999, -999999, 999999, '*/+-', 300000, 9999]
+  impossible: [-97641959, 66666466, -97641959, 66666466, '*/+-', 975848, 6666]
 }
 
 let operators = {
