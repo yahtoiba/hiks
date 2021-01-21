@@ -10,14 +10,14 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
 *Filesize:* ${filesizeF}
 *${isLimit ? 'Pakai ': ''}Link:* ${dl_link}
 `.trim(), m)
-  if (!isLimit) conn.sendFile(m.chat, dl_link, title + '.mp3', `
+  if (!isLimit) conn.sendFile(m.chat, dl_link, 'video.mp4', `
 *Title:* ${title}
 *Filesize:* ${filesizeF}
-`.trim(), m, false, { asDocument: true })
+`.trim(), m)
 }
-handler.help = ['mp3','a'].map(v => 'yt' + v + ' <url>')
+handler.help = ['mp4','v',''].map(v => 'yt' + v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^yt(a|mp3)$/i
+handler.command = /^yt(v|mp4)?$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
@@ -61,7 +61,7 @@ function ytv(url) {
                     console.log('Scraping...')
                     document = (new JSDOM(res.result)).window.document
                     yaha = document.querySelectorAll('td')
-                    filesize = yaha[yaha.length - 10].innerHTML
+                    filesize = yaha[yaha.length - 23].innerHTML
                     id = /var k__id = "(.*?)"/.exec(document.body.innerHTML) || ['', '']
                     thumb = document.querySelector('img').src
                     title = document.querySelector('b').innerHTML
@@ -72,8 +72,8 @@ function ytv(url) {
                         v_id: ytId[1],
                         ajax: '1',
                         token: '',
-                        ftype: 'mp3',
-                        fquality: 128
+                        ftype: 'mp4',
+                        fquality: 360
                     })
                         .then(res => res.json())
                         .then(res => {
