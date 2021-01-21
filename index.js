@@ -1,18 +1,13 @@
-console.log('Jreng Jreng Jreng...')
+console.log('Starting...........')
 let { spawn } = require('child_process')
 let path = require('path')
 const CFonts  = require('cfonts')
-CFonts.say('TEAM TERMUX', {
+CFonts.say('TERMUX WHATSAPP BOT', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']
 })
-CFonts.say('\'Hiks\' BOT', {
-  font: 'console',
-  align: 'center',
-  gradient: ['red', 'magenta']
-})
-CFonts.say('\'By\' @itspapoy', {
+CFonts.say('\'H i k s B O T\' By @itspapoy', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'yellow']
