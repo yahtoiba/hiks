@@ -72,7 +72,7 @@ conn.handler = async function (m) {
         ) global.DATABASE._data.users[m.sender].lastclaim = 0
       } else global.DATABASE._data.users[m.sender] = {
         exp: 0,
-        limit: 20,
+        limit: 30,
         lastclaim: 0,
       }
       if (global.DATABASE._data.chats[m.chat]) {
@@ -147,10 +147,10 @@ conn.handler = async function (m) {
 
         m.isCommand = true
         let xp = 'exp' in plugin ? parseInt(plugin.exp) : 9
-        if (xp > 99) m.reply('Ngecit -_-')
+        if (xp > 99) m.reply('Ngecheat -_-')
         else m.exp += xp
         if (!isPrems && global.DATABASE._data.users[m.sender].limit < 1 && plugin.limit) {
-          this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
+          this.reply(m.chat, `Limit Kamu habis, Silahkan beli melalui *${usedPrefix}buy*`, m)
           continue
         }
         try {
@@ -173,7 +173,7 @@ conn.handler = async function (m) {
           console.log(e)
           this.reply(m.chat, util.format(e), m)
         } finally {
-          if (m.limit == true) this.reply(m.chat, '1 Limit terpakai', m)
+          if (m.limit == true) this.reply(m.chat, 'Limit berkurang -1', m)
         }
   			break
   		}
@@ -199,13 +199,13 @@ global.prems = []
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    owner: 'Perintah ini hanya dapat digunakan oleh Owner Nomor!',
-    mods: 'Perintah ini hanya dapat digunakan oleh Moderator!',
-    premium: 'Perintah ini hanya untuk member Premium!',
-    group: 'Perintah ini hanya dapat digunakan di grup!',
+    owner: 'Perintah ini hanya dapat digunakan oleh Owner!',
+    mods: 'Perintah ini hanya dapat digunakan oleh Owner!',
+    premium: 'Perintah ini hanya untuk Member Premium!',
+    group: 'Perintah ini hanya dapat digunakan di Group!',
     private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Perintah ini hanya untuk admin grup!',
-    botAdmin: 'Jadikan bot sebagai admin untuk menggunakan perintah ini!'
+    admin: 'Perintah ini hanya untuk Admin Grup!',
+    botAdmin: 'Jadikan bot sebagai Admin untuk menggunakan perintah ini!'
   }[type]
   msg && conn.reply(m.chat, msg, m)
 }
