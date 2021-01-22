@@ -44,7 +44,7 @@ Download Apk WA Business disini :
 ```
 ---------
 
-##### Get ApiKey?
+###### Get ApiKey?
 
 Beberapa fitur berjalan menggunakan apikey, jika apikey tidak tersedia maka beberapa fitur tidak bisa di pakai.
 
@@ -55,7 +55,7 @@ Beberapa fitur berjalan menggunakan apikey, jika apikey tidak tersedia maka bebe
 
 ---------
 
-##### Special Thanks 4
+###### Special Thanks 4
 
 | [Nurutomo](https://github.com/Nurutomo) |
 | :-: |
