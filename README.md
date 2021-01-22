@@ -6,7 +6,7 @@ Download Apk Termux disini :
 
 [Click Here](https://play.google.com/store/apps/details?id=com.termux) 
 
-Download Apk WhatsApp Bussines disini :
+Download Apk WA Business disini :
 
 [Click Here](https://play.google.com/store/apps/details?id=com.whatsapp.w4b) 
 
