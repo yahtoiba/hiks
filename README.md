@@ -2,18 +2,18 @@
 | :-: | :-: | :-: |
 ---------
 
-Download Apk Termux disini :
+###### Download Apk Termux disini :
 
 [Click Here](https://play.google.com/store/apps/details?id=com.termux) 
 
-Download Apk WA Business disini :
+###### Download Apk WA Business disini :
 
 [Click Here](https://play.google.com/store/apps/details?id=com.whatsapp.w4b) 
 
 ---------
 ```Ikuti Langkah²nya```
 
-##### Termux Only
+###### Termux Only
 ```bash
 > pkg update && pkg upgrade
 > pkg install git -y
