@@ -14,6 +14,12 @@
 ```
 --------
 
+###### Info Update .10 ==> .11
+```bash
+> npm i -g npm
+```
+--------
+
 ###### Run
 ```bash
 > node . [<session name>] (session name is optional)
