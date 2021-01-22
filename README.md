@@ -48,10 +48,10 @@ Download Apk WA Business disini :
 
 Beberapa fitur berjalan menggunakan apikey, jika apikey tidak tersedia maka beberapa fitur tidak bisa di pakai.
 
-| [Apibarbar](https://mhankbarbar.tech/) |
-| [Apivhtear](https://vhtear.com/) |
-| [Apitobz](https://tobz-api.herokuapp.com/) |
-| :-: |
+
+| [Apibarbar](https://mhankbarbar.tech/) | [Apivhtear](https://vhtear.com/) | [Apitobz](https://tobz-api.herokuapp.com/) |
+| :-: | :-: | :-: |
+
 
 ---------
 
