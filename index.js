@@ -12,6 +12,11 @@ CFonts.say('\'Hiks-Bot\' By @itspapoy', {
   align: 'center',
   gradient: ['red', 'magenta']
 })
+CFonts.say('\'Thanks\' For @Nurutomo', {
+  font: 'chrome',
+  align: 'center',
+  gradient: ['red', 'yellow']
+})
 
 function start() {
   let args = [path.join(__dirname, 'main.js'), ...process.argv.slice(2)]
