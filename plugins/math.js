@@ -1,14 +1,8 @@
 global.math = global.math ? global.math : {}
 let handler  = async (m, { conn, args, usedPrefix }) => {
-  if (args.length < 1) return conn.reply(m.chat, `
-Mode: ${Object.keys(modes).join(' | ')}
-Contoh penggunaan: ${usedPrefix}math medium
-`.trim(), m)
+  if (args.length < 1) return conn.reply(m.chat, 'Mode: noob | easy | medium | hard | expert | extreme | impossible\n\nContoh penggunaan: ' + usedPrefix + 'math medium', m)
   let mode = args[0].toLowerCase()
-  if (!(mode in modes)) return conn.reply(m.chat, `
-Mode: ${Object.keys(modes).join(' | ')}
-Contoh penggunaan: ${usedPrefix}math medium
-`.trim(), m)
+  if (!(mode in modes)) return conn.reply(m.chat, 'Mode: noob | easy | medium | hard | expert | extreme | impossible\n\nContoh penggunaan: ' + usedPrefix + 'math medium', m)
   let id = m.chat
   if (id in global.math) return conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', global.math[id][0])
   let math = genMath(mode)
@@ -31,11 +25,11 @@ let modes = {
   noob: [-3, 3,-3, 3, '+-', 15000, 10],
   easy: [-10, 10, -10, 10, '*/+-', 20000, 40],
   medium: [-40, 40, -20, 20, '*/+-', 40000, 150],
-  hard: [-100, 100, -70, 70, '*/+-', 60000, 350],
-  extreme: [-999999, 999999, -999999, 999999, '*/', 99999, 9999],
-  impossible: [-99999999999, 99999999999, -99999999999, 999999999999, '*/', 30000, 35000],
-  impossible2: [-999999999999999, 999999999999999, -999, 999, '/', 30000, 5000],
-  asiapsantuy: [-5, 5, -5, 5, '/', 30000, 588899]
+  hard: [-100, 100, -70, 70, '*/+-', 60000, 500],
+  expert: [-999999, 999999, -999999, 999999, '*/', 99999, 4000],
+  extreme: [-888888888888, 888888888888, -888888888888, 888888888888, '*/', 30000, 5000],
+  impossible: [-999999999999999, 999999999999999, -999999999999, 999999999999, '/', 30000, 10000],
+  asiapsantuy: [-5, 5, -5, 5, '/', 30000, 578927]
 } 
 
 let operators = {
