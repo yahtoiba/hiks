@@ -4,11 +4,11 @@
 
 Download Apk Termux disini :
 
-[DOWNLOAD Termux](https://play.google.com/store/apps/details?id=com.termux) 
+[Click Here](https://play.google.com/store/apps/details?id=com.termux) 
 
 Download Apk WhatsApp Bussines disini :
 
-[DOWNLOAD Whatsapp Bisnis](https://play.google.com/store/apps/details?id=com.whatsapp.w4b) 
+[Click Here](https://play.google.com/store/apps/details?id=com.whatsapp.w4b) 
 
 ---------
 
