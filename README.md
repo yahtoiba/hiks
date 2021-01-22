@@ -11,6 +11,7 @@ Download Apk WA Business disini :
 [Click Here](https://play.google.com/store/apps/details?id=com.whatsapp.w4b) 
 
 ---------
+```Ikuti Langkah²nya```
 
 ##### Termux Only
 ```bash
