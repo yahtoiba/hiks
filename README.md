@@ -1,6 +1,17 @@
 | H i k s | B O T | [v2.0](https://github.com/yahtoiba) |
 | :-: | :-: | :-: |
 ---------
+
+Download Apk Termux disini :
+
+[DOWNLOAD Termux](https://play.google.com/store/apps/details?id=com.termux) 
+
+Download Apk WhatsApp Bussines disini :
+
+[DOWNLOAD Whatsapp Bisnis](https://play.google.com/store/apps/details?id=com.whatsapp.w4b) 
+
+---------
+
 ##### Termux Only
 ```bash
 > pkg update && pkg upgrade
@@ -35,7 +46,11 @@
 
 ##### Get ApiKey?
 
-| [MhankBarBar](https://mhankbarbar.tech) |
+Beberapa fitur berjalan menggunakan apikey, jika apikey tidak tersedia maka beberapa fitur tidak bisa di pakai.
+
+| [Apibarbar](https://mhankbarbar.tech/) |
+| [Apivhtear](https://vhtear.com/) |
+| [Apitobz](https://tobz-api.herokuapp.com/) |
 | :-: |
 
 ---------
