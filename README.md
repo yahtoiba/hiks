@@ -3,7 +3,7 @@
 ---------
 
 <p align="center"> 
-  Waiting...<br>
+  Req<br>
   <img src="https://profile-counter.glitch.me/yahtoiba-hiks/count.svg" />
 </p>
 
