@@ -2,6 +2,37 @@
 | :-: | :-: | :-: |
 ---------
 
+<p align="center"> 
+  Waiting...<br>
+  <img src="https://profile-counter.glitch.me/yahtoiba-hiks/count.svg" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/yahtoiba/hiks"><img title="Stars" src="https://img.shields.io/github/stars/yahtoiba/hiks?color=red&style=flat-square" /></a>
+  <a href="https://github.com/yahtoiba/hiks/network/members"><img title="Forks" src="https://img.shields.io/github/forks/yahtoiba/hiks?color=red&style=flat-square" /></a>
+  <a href="https://github.com/yahtoiba/hiks/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/yahtoiba/hiks?label=watchers&color=blue&style=flat-square" /></a> <br>
+  <a href="https://www.npmjs.com/package/@open-wa/wa-automate"><img src="https://img.shields.io/npm/v/@open-wa/wa-automate.svg?color=green" /></a>
+  <img src="https://img.shields.io/node/v/@open-wa/wa-automate" />
+  <img src="https://img.shields.io/badge/maintained%3F-yes-green.svg?style=flat" />
+  <img src="https://img.shields.io/github/repo-size/yahtoiba/hiks" /> <br>
+</p>
+
+<p align="center">
+<a href="https://github.com/DEV-HIKS"><img title="DEV-HIKS" src="https://img.shields.io/badge/DEV-HIKS-green.svg?style=for-the-badge&logo=github"></a>
+</p>
+
+---------
+
+
+| Temporary artificial features and modification |
+| :-: |
+
+
+| ```please wait for the manuscript in the manufacturing process... ``` |
+| :-: |
+
+---------
+
 ###### Download Apk Termux disini :
 
 [Click Here](https://play.google.com/store/apps/details?id=com.termux) 
