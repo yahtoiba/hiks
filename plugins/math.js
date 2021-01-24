@@ -1,8 +1,8 @@
 global.math = global.math ? global.math : {}
 let handler  = async (m, { conn, args, usedPrefix }) => {
-  if (args.length < 1) return conn.reply(m.chat, 'Mode: noob | easy | medium | hard | expert | extreme | impossible\n\nContoh penggunaan: ' + usedPrefix + 'math medium', m)
+  if (args.length < 1) return conn.reply(m.chat, 'Mode: tk | sd | smp | sma | smk | kuliah | albert | santuy |\n\nContoh penggunaan: ' + usedPrefix + 'math ez', m)
   let mode = args[0].toLowerCase()
-  if (!(mode in modes)) return conn.reply(m.chat, 'Mode: noob | easy | medium | hard | expert | extreme | impossible\n\nContoh penggunaan: ' + usedPrefix + 'math medium', m)
+  if (!(mode in modes)) return conn.reply(m.chat, 'Mode: tk | sd | smp | sma | smk | kuliah | albert | santuy |\n\nContoh penggunaan: ' + usedPrefix + 'math ez', m)
   let id = m.chat
   if (id in global.math) return conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', global.math[id][0])
   let math = genMath(mode)
@@ -22,14 +22,15 @@ handler.command = /^math/i
 module.exports = handler
 
 let modes = {
-  noob: [-3, 3,-3, 3, '+-', 15000, 10],
-  easy: [-10, 10, -10, 10, '*/+-', 20000, 40],
-  medium: [-40, 40, -20, 20, '*/+-', 40000, 150],
-  hard: [-100, 100, -70, 70, '*/+-', 60000, 500],
-  expert: [-999999, 999999, -999999, 999999, '*/', 99999, 4000],
-  extreme: [-888888888888, 888888888888, -888888888888, 888888888888, '*/', 30000, 5000],
-  impossible: [-999999999999999, 999999999999999, -999999999999, 999999999999, '/', 30000, 10000],
-  asiapsantuy: [-5, 5, -5, 5, '/', 30000, 578927]
+  tk: [-3, 3,-3, 3, '+-', 15000, 10],
+  sd: [-10, 10, -10, 10, '*/+-', 20000, 100],
+  smp: [-40, 40, -20, 20, '*/+-', 40000, 250],
+  sma: [-100, 100, -70, 70, '*/+-', 40000, 750],
+  smk: [-1000, 1000, -700, 700, '*/+-', 30000, 1000],
+  kuliah: [-999999, 999999, -999999, 999999, '*/', 30000, 5000],
+  albert: [-888888888888, 888888888888, -888888888888, 888888888888, '*/', 30000, 10000],
+  santuy: [-999999999999999, 999999999999999, -999999999999, 999999999999, '/', 30000, 50000],
+  y: [-5, 5, -5, 5, '/', 30000, 1234567]
 } 
 
 let operators = {
