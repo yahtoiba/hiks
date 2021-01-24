@@ -197,6 +197,8 @@ conn.on('error', conn.logger.error)
 global.mods = []
 global.prems = []
 
+cr = '*BOT INI SUDAH TERVERIFIKASI*'
+
 global.dfail = (type, m, conn) => {
   let msg = {
     owner: 'Perintah ini hanya dapat digunakan oleh Owner!',
