@@ -6,7 +6,7 @@ let handler = async(m, { conn, participants, text, usedPrefix }) => {
     if (!jumlah) m.reply('Jumlah ?')
 
     global.DATABASE._data.users[m.mentionedJid].limit = JSON.parse(jumlah)
-    m.reply('Done!')
+    m.reply('Berhasil - berhasil horee!')
 }
 handler.help = ['limit <jumlah>']
 handler.tags = ['owner']
