@@ -194,10 +194,10 @@ conn.handler = async function (m) {
 
 conn.on('message-new', conn.handler) 
 conn.on('error', conn.logger.error)
-global.mods = []
-global.prems = []
+global.mods = ["6287714745440@s.whatsapp.net"]
+global.prems = ["6287714745440@s.whatsapp.net"]
 
-cr = '*BOT INI SUDAH TERVERIFIKASI*'
+cr = '*Hiks Bot*'
 
 global.dfail = (type, m, conn) => {
   let msg = {
