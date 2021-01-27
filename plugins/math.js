@@ -1,8 +1,8 @@
 global.math = global.math ? global.math : {}
 let handler  = async (m, { conn, args, usedPrefix }) => {
-  if (args.length < 1) return conn.reply(m.chat, 'Mode: tk | sd | smp | sma | smk | kuliah | albert | santuy |\n\nContoh penggunaan: ' + usedPrefix + 'math ez', m)
+  if (args.length < 1) return conn.reply(m.chat, 'Mode: tk | sd | smp | sma | smk | kuliah | albert | gila |\n\nContoh penggunaan: ' + usedPrefix + 'math ez', m)
   let mode = args[0].toLowerCase()
-  if (!(mode in modes)) return conn.reply(m.chat, 'Mode: tk | sd | smp | sma | smk | kuliah | albert | santuy |\n\nContoh penggunaan: ' + usedPrefix + 'math ez', m)
+  if (!(mode in modes)) return conn.reply(m.chat, 'Mode: tk | sd | smp | sma | smk | kuliah | albert | gila |\n\nContoh penggunaan: ' + usedPrefix + 'math ez', m)
   let id = m.chat
   if (id in global.math) return conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', global.math[id][0])
   let math = genMath(mode)
@@ -10,7 +10,7 @@ let handler  = async (m, { conn, args, usedPrefix }) => {
     await conn.reply(m.chat, `Berapa hasil dari *${math.str}*?\n\nTimeout: ${(math.time / 1000).toFixed(2)} detik\nBonus Jawaban Benar: ${math.bonus} XP`, m),
     math, 4,
     setTimeout(() => {
-      if (global.math[id]) conn.reply(m.chat, `Waktu habis!\nJawabannya adalah ${math.result}`, global.math[id][0])
+      if (global.math[id]) conn.reply(m.chat, `Ciee Waktunya habis!\nJawabannya adalah ${math.result}`, global.math[id][0])
       delete global.math[id]
     }, math.time)
   ]
@@ -29,8 +29,9 @@ let modes = {
   smk: [-1000, 1000, -700, 700, '*/+-', 30000, 1000],
   kuliah: [-999999, 999999, -999999, 999999, '*/', 30000, 5000],
   albert: [-888888888888, 888888888888, -888888888888, 888888888888, '*/', 30000, 10000],
-  santuy: [-999999999999999, 999999999999999, -999999999999, 999999999999, '/', 20000, 50000],
-  y: [-3, 3,-1, 1, '+-', 30000, 938390]
+  gila: [-999999999999999, 999999999999999, -999999999999, 999999999999, '/', 20000, 50000],
+  y: [+3, 3, +1, 1, '+', 30000, 98765]
+  gampang: [-100, 555, -666, 500 '*/+-', 5000, 10000]
 } 
 
 let operators = {
