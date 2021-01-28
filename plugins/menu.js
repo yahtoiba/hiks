@@ -93,6 +93,10 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let replace = {
       '%': '%',
       p: _p, uptime,
+      npmname: package.name,
+      npmdesc: package.description,
+      version: package.version,
+      github: package.homepage ? package.homepage.url || package.homepage : '[unknown github url]',
       exp, limit, name, weton, week, date, time, totalreg,
       readmore: readMore
     }
@@ -116,7 +120,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.exp = 2
+handler.exp = 3
 
 module.exports = handler
 
