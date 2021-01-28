@@ -205,8 +205,24 @@ conn.handler = async function (m) {
     }
   }
 }
-conn.welcome = 'Selamat datang di Group , @user!'
-conn.bye = 'Sayonaraa👋🏻, @user!'
+conn.welcome = ' 
+                              ```Hallo``` @user
+╭━═══════════════════════━╮
+│             ⚘  ```Welcome to Group```  ⚘
+│       
+│ 
+│⚘ ```Nama```    :
+│ 
+│⚘ ```Umur```      :
+│ 
+│⚘ ```Askot```     :
+│ 
+│⚘ ```Gender```  :
+│
+│ 
+│ _Jangan Lupa di Baca Desc nyaa yaaaaaaa_ 
+╰━═══════════════════════━╯'
+conn.bye = '*Sayonaraaa👋🏻* @user nitip seblaq yah ᥬ😳᭄'
 conn.onAdd = async function ({ m, participants }) {
   for (let user of participants) {
     let pp = './src/avatar_contact.png'
