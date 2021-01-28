@@ -9,6 +9,13 @@ let fs = require('fs')
 let path = require('path')
 let util = require('util')
 let WAConnection = simple.WAConnection(_WAConnection)
+
+
+global.owner = ['6287714745440'] // Put your number here
+global.mods = [] // Want some help?
+global.prems = [] // Premium user has unlimited limit
+
+
 global.timestamp = {
   start: new Date
 }
@@ -97,13 +104,14 @@ conn.handler = async function (m) {
         let _args = noPrefix.trim().split` `.slice(1)
         let text = _args.join` `
   		  command = (command || '').toLowerCase()
-        let isOwner = m.fromMe
+        let isROwner = [global.conn.user.jid, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+        let isOwner = isROwner || m.fromMe
   			let isAccept = plugin.command instanceof RegExp ? plugin.command.test(command) :
         plugin.command instanceof Array ? plugin.command.includes(command) :
         plugin.command instanceof String ? plugin.command == command : false
   			if (!isAccept) continue
-        let isMods = isOwner || global.mods.includes(m.sender)
-        let isPrems = isMods || global.prems.includes(m.sender)
+        let isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+        let isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         let groupMetadata = m.isGroup ? await this.groupMetadata(m.chat) : {}
         let participants = m.isGroup ? groupMetadata.participants : []
         let user = m.isGroup ? participants.find(u => u.jid == m.sender) : {}
@@ -118,6 +126,10 @@ conn.handler = async function (m) {
           usedPrefix
         })) return
         let fail = plugin.fail || global.dfail
+        if (plugin.rowner && !isROwner) {
+          fail('rowner', m, this)
+          continue
+        }
         if (plugin.owner && !isOwner) {
           fail('owner', m, this)
           continue
@@ -149,8 +161,8 @@ conn.handler = async function (m) {
         let xp = 'exp' in plugin ? parseInt(plugin.exp) : 9
         if (xp > 99) m.reply('Ngecheat -_-')
         else m.exp += xp
-        if (!isPrems && global.DATABASE._data.users[m.sender].limit < 1 && plugin.limit) {
-          this.reply(m.chat, `Limit Kamu habis, Silahkan beli melalui *${usedPrefix}buy*`, m)
+        if (!isPrems && global.DATABASE._data.users[m.sender].limit < m.limit * 1 && plugin.limit) {
+          this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
           continue
         }
         try {
@@ -164,6 +176,8 @@ conn.handler = async function (m) {
             conn: this,
             participants,
             groupMetadata,
+            isROwner,
+            isOwner,
             isAdmin,
             isBotAdmin,
             isPrems
@@ -173,7 +187,7 @@ conn.handler = async function (m) {
           console.log(e)
           this.reply(m.chat, util.format(e), m)
         } finally {
-          if (m.limit == true) this.reply(m.chat, 'Limit berkurang -1', m)
+          if (m.limit) this.reply(m.chat, + m.limit + ' Limit terpakai', m)
         }
   			break
   		}
@@ -191,25 +205,62 @@ conn.handler = async function (m) {
     }
   }
 }
+conn.welcome = 'Selamat datang di Group , @user!'
+conn.bye = 'Sayonaraa👋🏻, @user!'
+conn.onAdd = async function ({ m, participants }) {
+  for (let user of participants) {
+    let pp = './src/avatar_contact.png'
+    try {
+      pp = await this.getProfilePicture(user).catch(() => {})
+    } finally {
+      let text = (this.welcome || conn.welcome || 'Welcome, @user!').replace('@user', '@' + user.split('@')[0])
+      this.sendFile(m.key.remoteJid, pp, 'pp.jpg', text, m, false, {
+        contextInfo: {
+          mentionedJid: [user]
+        }
+      })
+    }
+  }
+}
 
-conn.on('message-new', conn.handler) 
+conn.onLeave = async function  ({ m, participants }) {
+  for (let user of participants) {
+    let pp = './src/avatar_contact.png'
+    try {
+      pp = await this.getProfilePicture(user).catch(() => {})
+    } finally {
+      let text = (this.bye || conn.bye || 'Bye, @user!').replace('@user', '@' + user.split('@')[0])
+      this.sendFile(m.key.remoteJid, pp, 'pp.jpg', text, m, false, {
+        contextInfo: {
+          mentionedJid: [user]
+        }
+      })
+    }
+  }
+}
+
+conn.on('message-new', conn.handler)
+conn.on('group-add', conn.onAdd)
+conn.on('group-leave', conn.onLeave)
 conn.on('error', conn.logger.error)
-global.mods = ["6287714745440@s.whatsapp.net"]
-global.prems = ["6287714745440@s.whatsapp.net"]
-
-cr = '*Hiks Bot*'
+conn.on('close', async () => {
+  await conn.loadAuthInfo(authFile)
+  await conn.connect()
+  global.timestamp.connect = new Date
+})
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    owner: 'Perintah ini hanya dapat digunakan oleh Owner!',
-    mods: 'Perintah ini hanya dapat digunakan oleh Owner!',
-    premium: 'Perintah ini hanya untuk Member Premium!',
-    group: 'Perintah ini hanya dapat digunakan di Group!',
+    rOwner: 'Perintag ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
+    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
+    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
+    premium: 'Perintah ini hanya untuk member _*Premium*_ !',
+    group: 'Perintah ini hanya dapat digunakan di grup!',
     private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Perintah ini hanya untuk Admin Grup!',
-    botAdmin: 'Jadikan bot sebagai Admin untuk menggunakan perintah ini!'
+    admin: 'Perintah ini hanya untuk *Admin* grup!',
+    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!'
   }[type]
-  msg && conn.reply(m.chat, msg, m)
+  if (msg)conn.reply(m.chat, msg, m)
 }
 
 if (opts['test']) {
@@ -232,10 +283,14 @@ if (opts['test']) {
     timestamp: +new Date
   })
   process.stdin.on('data', chunk => conn.sendMessage('123@s.whatsapp.net', chunk.toString().trimEnd(), 'conversation'))
+} else {
+  process.stdin.on('data', chunk => {
+    process.send(chunk.toString().trimEnd())
+  })
+  conn.connect().then(() => {
+    global.timestamp.connect = new Date
+  })
 }
-else conn.connect().then(() => {
-  global.timestamp.connect = new Date
-})
 process.on('uncaughtException', console.error)
 // let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
 
