@@ -1,5 +1,8 @@
+let fs = require ('fs')
+let path = require('path')
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   try {
+    let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
     let exp = global.DATABASE.data.users[m.sender].exp
     let limit = global.DATABASE.data.users[m.sender].limit
     let name = conn.getName(m.sender)
@@ -62,7 +65,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
 ╭─  ⃢⚘  ${conn.getName(conn.user.jid)}   ⃢⚘」
-│⚘ Hii, %name ᥬ😳᭄
+│⚘ Hae, %name ᥬ😳᭄
 │
 │⚘ *%exp XP*
 │⚘ Limit kamu *%limit*
@@ -71,14 +74,15 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 │⚘ Waktu: *%time*
 │
 │⚘ Uptime: *%uptime*
-│⚘ Database: %totalreg nomor
+│⚘ Database User: %totalreg nomor
 │ 
-╰───────
+╰──────── ⃢͓̽⃟͓̽ཷ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧ
+%readmore`
 %readmore`
     let header = conn.menu.header || '╭──❍` %category'
-    let body   = conn.menu.body   || '├⚘` %cmd%islimit'
+    let body   = conn.menu.body   || '│ ⚘ %cmd%islimit'
     let footer = conn.menu.footer || '╰─────────────ᜰ\n'
-    let after  = conn.menu.after  || conn.user.jid == global.conn.user.jid ? '' : `\nPowered by https://wa.me/${global.conn.user.jid.split`@`[0]}`
+    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
