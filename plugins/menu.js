@@ -64,18 +64,19 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
-╭─────  ⃢⚘  ${conn.getName(conn.user.jid)}   ⃢⚘」
-│⚘ Mehh, %name ᥬ😳᭄
+╭───── ⚘ {conn.getName(conn.user.jid)} ⚘
+│⚘ Haee, %name ᥬ😳᭄
 │
-│⚘ *%exp XP*
-│⚘ Limit kamu *%limit*
+│⚘ XP *%exp XP*
+│⚘ Limit: *%limit*
 │
-│⚘ Tanggal: *%week %weton, %date*
+│⚘ Tanggal: *%week , %date*
 │⚘ Waktu: *%time*
 │
 │⚘ Uptime: *%uptime*
 │⚘ Database User: %totalreg nomor
-╰──────── ⃢͓̽⃟͓̽ཷ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧ
+│
+╰────────────
 %readmore`
     let header = conn.menu.header || '╭────❍` %category'
     let body   = conn.menu.body   || '│ ⚘ %cmd%islimit'
