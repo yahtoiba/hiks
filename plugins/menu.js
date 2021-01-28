@@ -27,7 +27,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let tags = {
       'main': '𝐌𝐚𝐢𝐧',
       'info': '𝐈𝐧𝐟𝐨',
-      'about': '𝐀𝐛𝐨𝐮𝐭 & 𝐈𝐧𝐟𝐨',
+      'about': '𝐀𝐛𝐨𝐮𝐭',
       'xp': '𝐄𝐱𝐩 & 𝐋𝐢𝐦𝐢𝐭',
       'sticker': '𝐌𝐚𝐤𝐞𝐫',
       'kerang': '𝐊𝐞𝐫𝐚𝐧𝐠',
@@ -41,7 +41,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'owner': '𝐎𝐰𝐧𝐞𝐫',
       'host': '𝐇𝐨𝐬𝐭',
       'advanced': '𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝',
-      '': 'Next Update',
+      '': 'Next Update Wait..',
     }
     for (let plugin of Object.values(global.plugins))
       if (plugin && 'tags' in plugin)
@@ -64,8 +64,8 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
-╭─  ⃢⚘  ${conn.getName(conn.user.jid)}   ⃢⚘」
-│⚘ Hae, %name ᥬ😳᭄
+╭─────  ⃢⚘  ${conn.getName(conn.user.jid)}   ⃢⚘」
+│⚘ Mehh, %name ᥬ😳᭄
 │
 │⚘ *%exp XP*
 │⚘ Limit kamu *%limit*
@@ -75,14 +75,12 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 │
 │⚘ Uptime: *%uptime*
 │⚘ Database User: %totalreg nomor
-│ 
 ╰──────── ⃢͓̽⃟͓̽ཷ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ึ͓̽ࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧ
 %readmore`
-%readmore`
-    let header = conn.menu.header || '╭──❍` %category'
+    let header = conn.menu.header || '╭────❍` %category'
     let body   = conn.menu.body   || '│ ⚘ %cmd%islimit'
     let footer = conn.menu.footer || '╰─────────────ᜰ\n'
-    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
+    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
@@ -124,7 +122,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.exp = 3
+handler.exp = 5
 
 module.exports = handler
 
