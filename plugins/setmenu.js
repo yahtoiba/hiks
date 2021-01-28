@@ -48,10 +48,11 @@ Universal:
 %time (Jam)
 %uptime (Uptime Bot)
 %totalreg (Jumlah User yang ada di database)
-
+%npmname
+%npmdesc
+%version
 Bagian Menu Header & Footer:
 %category (Kategori)
-
 Bagian Menu Body:
 %cmd (Command)
 %islimit (Jika command di limit)
