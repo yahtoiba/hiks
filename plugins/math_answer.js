@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
   if (!m.quoted) return
   if (m.quoted.sender != conn.user.jid) return
   if (!/^Berapa hasil dari/i.test(m.quoted.text)) return
-  if (!(m.chat in global.math)) return conn.reply(m.chat, 'Soal itu syudah beres', m)
+  if (!(m.chat in global.math)) return conn.reply(m.chat, '*Soal* itu syudah beress lain kali di liat lagi yaa waktunyaツ', m)
   if (m.quoted.id == global.math[id][0].id) {
   let math = global.math[id][1]
   if (m.text == math.result) {
@@ -14,10 +14,10 @@ let handler = async (m, { conn }) => {
     delete global.math[id]
   } else {
     if (--global.math[id][2] == 0) {
-      conn.reply(m.chat, `*Cie Kesempatan habis!*\nJawaban: *${math.result}*`, m)
+      conn.reply(m.chat, `*yah Kesempatanmu habis:(*\n*Makanya Lebih Giat dan Rajin lagi belajar nya yaa><*\nAnswer: *${math.result}*`, m)
       clearTimeout(global.math[id][3])
       delete global.math[id]
-    } else conn.reply(m.chat, `*Cie Jawaban Salah!*\nMasih ada ${global.math[id][2]} kesempatan`, m)
+    } else conn.reply(m.chat, `*Cie Jawaban Salah!*\nTenang Masih ada ${global.math[id][2]} kesempatan lagi ayoo semangatt!`, m)
   }
  }
 }
