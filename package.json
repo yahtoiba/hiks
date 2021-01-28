@@ -1,7 +1,7 @@
 {
   "name": "hiks",
   "version": "1.2.0",
-  "description": "Customizable WhatsApp Bot",
+  "description": "Termux WhatsApp Bot",
   "depecrated": false,
   "main": "index.js",
   "directories": {
