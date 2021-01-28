@@ -71,9 +71,9 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 │⚘ Limit: *%limit*
 │
 │⚘ Tanggal: *%week , %date*
-│⚘ Waktu: *%time*
+│⚘ Jam: *%time*
 │
-│⚘ Uptime: *%uptime*
+│⚘ Bot Active: *%uptime*
 │⚘ Database User: %totalreg nomor
 │
 ╰────────────
