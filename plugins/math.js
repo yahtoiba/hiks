@@ -1,10 +1,16 @@
 global.math = global.math ? global.math : {}
 let handler  = async (m, { conn, args, usedPrefix }) => {
-  if (args.length < 1) return conn.reply(m.chat, 'Mode: tk | sd | smp | sma | smk | kuliah | albert | gila | gampang |\n\nContoh penggunaan: ' + usedPrefix + 'math ez', m)
+  if (args.length < 1) return conn.reply(m.chat, `
+  Mode: ${Object.keys(modes).join(' | ')}
+  Contoh penggunaan: ${usedPrefix}math smk
+`.trim(), m)
   let mode = args[0].toLowerCase()
-  if (!(mode in modes)) return conn.reply(m.chat, 'Mode: tk | sd | smp | sma | smk | kuliah | albert | gila | gampang |\n\nContoh penggunaan: ' + usedPrefix + 'math ez', m)
+  if (!(mode in modes)) return conn.reply(m.chat, `
+  Mode: ${Object.keys(modes).join(' | ')}
+  Contoh penggunaan: ${usedPrefix}math smk
+`.trim(), m)
   let id = m.chat
-  if (id in global.math) return conn.reply(m.chat, '*Heh bambank soal yang tadi belum di jawab, beresin dulu PR nya_-*', global.math[id][0])
+  if (id in global.math) return conn.reply(m.chat, 'Heh bambank soal yg tadi belum di beresin_-', global.math[id][0])
   let math = genMath(mode)
   global.math[id] = [
     await conn.reply(m.chat, `*Question:* umm.. Berapakah hasil dari *${math.str}* ?\n\nWaktunya: ${(math.time / 1000).toFixed(2)} detik\nKalo bener dapet XP nihh: ${math.bonus} XP`, m),
