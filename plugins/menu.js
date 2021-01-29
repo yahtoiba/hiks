@@ -65,9 +65,9 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
 ╭───── ⚘ {conn.getName(conn.user.jid)} ⚘
-│⚘ Haee, %name ᥬ😳᭄
+│⚘ Haee, %name  ᥬ😳᭄
 │
-│⚘ XP *%exp XP*
+│⚘ XP: *%exp XP*
 │⚘ Limit: *%limit*
 │
 │⚘ Tanggal: *%week , %date*
@@ -76,7 +76,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 │⚘ Bot Active: *%uptime*
 │⚘ Database User: %totalreg nomor
 │
-╰────────────
+╰──────────────
 %readmore`
     let header = conn.menu.header || '╭────❍` %category'
     let body   = conn.menu.body   || '│ ⚘ %cmd%islimit'
